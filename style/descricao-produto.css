@@ -11,13 +11,10 @@
 
 .info-produto {
   display: flex;
+  margin: 1rem;
   text-align: center;
 }
 
-.botao-editar {
-  background-color: #1b86ff;
-}
-
-.botao-excluir {
-  background-color: #ff4646;
+.info-produto__descricao {
+  margin: 1.5rem;
 }

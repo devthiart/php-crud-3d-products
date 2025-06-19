@@ -36,3 +36,12 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   font-weight: 600;
 }
+
+
+.botao-confirma {
+  background-color: #1b86ff;
+}
+
+.botao-cancela {
+  background-color: #ff4646;
+}

@@ -27,7 +27,9 @@ try {
   <title>Impressoes 3D do Thiago</title>
 </head>
 <body>
-  <a href="index.php"><p>Home</p></a>
+  <nav>
+    <a href="index.php"><p>Home</p></a>
+  </nav>
   <?php
     echo "
       <h1 class='titulo'>{$produto['nome']}</h1>
@@ -37,8 +39,8 @@ try {
           <h2 class='subtitulo'>Descrição</h2>
           <p>{$produto['descricao']}</p>
           <p class='preco'>R$ {$produto['preco']}</p>
-          <a class='botao botao-editar' href=''>Editar</a>
-          <a class='botao botao-excluir' href=''>Excluir</a>
+          <a class='botao botao-confirma' href=''>Editar</a>
+          <a class='botao botao-cancela' href='confirma-excluir-produto.php?nome={$produto['nome']}&id={$produto['id']}'>Excluir</a>
         </div>
       </div>
     ";

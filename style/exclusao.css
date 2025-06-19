@@ -1,0 +1,10 @@
+.container-exclusao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-exclusao__botoes {
+  margin: 2rem;
+}
