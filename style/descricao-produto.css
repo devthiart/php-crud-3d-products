@@ -2,7 +2,7 @@
     display: block; /* Garante que a imagem ocupe sua própria linha */
     max-width: 100%; /* Garante que a imagem seja responsiva */
     height: auto; /* Mantém a proporção */
-    width: 40%; /* Largura desejada para a imagem (ajuste conforme necessário) */
+    width: 40vw; /* Largura desejada para a imagem (ajuste conforme necessário) */
     margin: 0 auto 1.5rem auto; /* Centraliza e adiciona margem inferior */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -17,4 +17,14 @@
 
 .info-produto__descricao {
   margin: 1.5rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .info-produto {
+    display: block;
+  }
+
+  .imagem-produto {
+    width: 90vw;
+  }
 }
