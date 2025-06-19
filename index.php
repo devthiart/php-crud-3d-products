@@ -8,8 +8,6 @@ $dsn = "mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME;
 
 try {
     $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
-
-    echo "<p>Conexão PDO realizada com sucesso!</p><br>";
     
     $stmt = $conexao_pdo->query("SELECT * FROM produtos");
     $produtos = $stmt->fetchAll();
@@ -24,25 +22,28 @@ try {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/lista-produtos.css">
   <title>Impressoes 3D do Thiago</title>
 </head>
 <body>
-  <h1>Bem vindo a loja de impressões 3D to Thiago!</h1>
-  <h2>Lista de produtos</h2>
+  <h1 class="titulo">Bem vindo a loja de impressões 3D do Thiago!</h1>
+  <h2 class="subtitulo">Lista de produtos</h2>
+  <a class="link-novo-produto" href="novo-produto.php"><p>Cadastrar novo produto</p></a>
+  <ul class="lista-produtos">
   <?php
-    echo '<ul>';
     foreach($produtos as $produto) {
       echo "
-        <li>
+        <li class='card-produto'>
           <a href='produto.php?id={$produto['id']}'>
-            <p>{$produto['nome']}</p>
-            <img src='{$produto['foto_url']} alt='Foto de {$produto['nome']}'/>
-            <p>R$ {$produto['preco']}</p>
+            <img class='card-produto__foto' src='{$produto['foto_url']} alt='Foto de {$produto['nome']}'/>
+            <p class='card-produto__nome'>{$produto['nome']}</p>
+            <p class='card-produto__preco preco'>R$ {$produto['preco']}</p>
           </a>
         </li>
       ";
     }
-    echo '</ul>';
   ?>
+  </ul>
 </body>
 </html>
