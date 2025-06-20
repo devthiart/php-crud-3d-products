@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id'] ?? null;
+$id = $_GET['id'];
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');

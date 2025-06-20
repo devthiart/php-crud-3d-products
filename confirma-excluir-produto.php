@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/exclusao.css">
+  <link rel="stylesheet" href="style/mensagens.css">
   <title>Impressoes 3D do Thiago</title>
 </head>
 <body>
