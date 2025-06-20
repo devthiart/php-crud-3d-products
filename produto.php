@@ -35,9 +35,11 @@ try {
   <title>Impressoes 3D do Thiago</title>
 </head>
 <body>
-  <nav>
-    <a href="index.php"><p>Home</p></a>
+  <nav class="menu">
+    <a class="menu__item" href="index.php"><p>Home</p></a>
+    <a class="menu__item" href="cadastrar-produto.html"><p>Cadastrar Produto</p></a>
   </nav>
+  
   <?php
     echo "
       <h1 class='titulo'>{$produto['nome']}</h1>

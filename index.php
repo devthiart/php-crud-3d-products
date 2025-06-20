@@ -28,9 +28,13 @@ try {
   <title>Impressoes 3D do Thiago</title>
 </head>
 <body>
+  <nav class="menu">
+    <a class="menu__item" href="index.php"><p>Home</p></a>
+    <a class="menu__item" href="cadastrar-produto.html"><p>Cadastrar Produto</p></a>
+  </nav>
+  
   <h1 class="titulo">Bem vindo a loja de impressões 3D do Thiago!</h1>
   <h2 class="subtitulo">Lista de produtos</h2>
-  <a class="link-novo-produto" href="cadastrar-produto.html"><p>Cadastrar novo produto</p></a>
   <ul class="lista-produtos">
   <?php
     foreach($produtos as $produto) {

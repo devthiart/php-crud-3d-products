@@ -2,9 +2,30 @@
   background-color: #FFFFFF;
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 16px;
-  margin: 0 20px;
+  margin: 0;
   color: #1d1d1d;
 }
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin: 0;
+  padding: 0.6rem;
+}
+
+.menu__item {
+  font-size: 1.2rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 
 .titulo {
   padding: 1rem;
