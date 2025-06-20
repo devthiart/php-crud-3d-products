@@ -10,8 +10,15 @@ $id = $_GET['id'];
 
 try {
     $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
+
+    $sql = "DELETE FROM produtos WHERE id = :id;";
+
+    $stmt = $conexao_pdo->prepare($sql);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    $stmt->execute();
     
-    $stmt = $conexao_pdo->query("DELETE FROM produtos WHERE id = $id;");
 } catch (PDOException $erro) {
     echo "<h1 class='erro'>Falha na conexão PDO: " . $erro->getMessage() . "</h1><br>";
 }

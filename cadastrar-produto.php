@@ -13,7 +13,6 @@ $preco = $_POST['preco'];
 
 try {
     $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
-    $conexao_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "INSERT INTO produtos (nome, foto_url, descricao, preco) VALUES (:nome, :foto_url, :descricao, :preco)";
 
@@ -25,8 +24,6 @@ try {
     $stmt->bindParam(':preco', $preco, PDO::PARAM_STR);
 
     $stmt->execute();
-
-    echo "<h1>Produto cadastrado com sucesso!</h1>";
 
 } catch (PDOException $erro) {
     echo "<h1 class='erro'>Falha na operação: " . $erro->getMessage() . "</h1><br>";
