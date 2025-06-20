@@ -9,8 +9,16 @@ define('DB_NAME', 'loja_3d');
 $dsn = "mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME;
 
 try {
-    $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);   
-    $stmt = $conexao_pdo->query("SELECT * FROM produtos WHERE id = $id");
+    $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD); 
+    
+    $sql = "SELECT * FROM produtos WHERE id = :id";
+
+    $stmt = $conexao_pdo->prepare($sql);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    
+    $stmt->execute();
+
     $produto = $stmt->fetch();
 } catch (PDOException $erro) {
     echo "<h1 class='erro'>Falha na conexão PDO: " . $erro->getMessage() . "</h1><br>";
