@@ -47,7 +47,7 @@ try {
           <h2 class='subtitulo'>Descrição</h2>
           <p>{$produto['descricao']}</p>
           <p class='preco'>R$ {$produto['preco']}</p>
-          <a class='botao botao-confirma' href=''>Editar</a>
+          <a class='botao botao-confirma' href='form-editar-produto.php?id={$produto['id']}'>Editar</a>
           <a class='botao botao-cancela' href='confirma-excluir-produto.php?nome={$produto['nome']}&id={$produto['id']}'>Excluir</a>
         </div>
       </div>
