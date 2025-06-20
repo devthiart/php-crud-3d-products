@@ -8,8 +8,9 @@ $dsn = "mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME;
 
 try {
     $conexao_pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
-    
-    $stmt = $conexao_pdo->query("SELECT * FROM produtos");
+
+    $sql = "SELECT * FROM produtos";    
+    $stmt = $conexao_pdo->query($sql);
     $produtos = $stmt->fetchAll();
 } catch (PDOException $erro) {
     echo "<h1 class='erro'>Falha na conexão PDO: " . $erro->getMessage() . "</h1><br>";
@@ -29,7 +30,7 @@ try {
 <body>
   <h1 class="titulo">Bem vindo a loja de impressões 3D do Thiago!</h1>
   <h2 class="subtitulo">Lista de produtos</h2>
-  <a class="link-novo-produto" href="cadastrar-produto-form.php"><p>Cadastrar novo produto</p></a>
+  <a class="link-novo-produto" href="cadastrar-produto.html"><p>Cadastrar novo produto</p></a>
   <ul class="lista-produtos">
   <?php
     foreach($produtos as $produto) {
